@@ -1,0 +1,48 @@
+<details class="vdo_docs">
+    <summary>How to use the shortcode? (attributes reference)</summary>
+    <p>Minimal usage: <code>[vdo id="____"]</code>. It will be replaced by the video player.</p>
+    <p>More attributes can be defined like <code>[vdo id="_____" key1="value"]</code>. List of supported attributes:</p>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td><strong>Required</strong> It is the 32 character video identifier which can be copied from your vdocipher dashboard.</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>Width of the video player. There will always be a <code>max-width: 100%</code> applied to the video player to avoid overflow. Hence, this is recommended to be set to the highest acceptable value. Do not append "px" at the end.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>Recommended to be set to <code>auto</code>. Auto will mean that the height will be automatically adjusted according to the aspect ratio. If the height or width can not fit the available size, height will be adjusted using letter-boxing, meaning that black bars will be added in one-dimension until it fits.</td>
+        </tr>
+        <tr>
+            <td>no_annotate</td>
+            <td>Can be set to <code>true</code> if you want to disable watermark for a specific embed.</td>
+        </tr>
+        <tr><td colspan="2" style="text-align: center">Below attributes are only available on player v2 version.</td></tr>
+        <tr>
+            <td>vdo_theme</td>
+            <td>Player ID to be applied to this video. Player customisation id is different for v1 and v2 of the player. Using a theme will use that particular player version irrespective of player version selected here.</td>
+        </tr>
+        <tr>
+            <td>autoplay</td>
+            <td>Acceptable value: <code>true</code>. If set, video will play automatically. But due to browser restrictions, it will be muted. A small banner on the video will prompt the viewer to "Tap To Unmute"</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>Acceptable values: <code>on</code>(default), <code>off</code>, or <code>native</code>.</td>
+        </tr>
+<!--        <tr>-->
+<!--            <td>litemode</td>-->
+<!--            <td>If you have to embed multiple videos in the same page, it can fail with error due to limited number of DRM sessions available on a device. To avoid this problem, it is recommended to set <code>litemode="true"</code> which will defer the loading of media and starting DRM session until it is clicked.</td>-->
+<!--        </tr>-->
+        <tr>
+            <td>cc_language</td>
+            <td>You can upload the captions for the videos in VTT format from your vdocipher dashboard. These captions will be available from the player. This option sets the captions language to start with. Set this to <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">the two-letter representation of the language as defined in ISO 639-1</a>.</td>
+        </tr>
+    </table>
+</details>
